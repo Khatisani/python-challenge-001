@@ -1,5 +1,5 @@
 import unittest
-from attempt import bracket_validator
+from validator import bracket_validator
 
 class TestBracketValidator(unittest.TestCase):
 
@@ -19,7 +19,7 @@ class TestBracketValidator(unittest.TestCase):
 
     def test_proper_match_two_brackets(self):
         self.assertTrue(bracket_validator("life(())"))
-        self.assertTrue(bracket_validator("(li(f)e"))
+        self.assertTrue(bracket_validator("(li(f))e"))
         self.assertTrue(bracket_validator("((l)ife)"))   
 
         self.assertTrue(bracket_validator("life[[]]"))
@@ -89,6 +89,15 @@ class TestBracketValidator(unittest.TestCase):
 
     def test_empty_string(self):
         self.assertTrue(bracket_validator(""))
+
+    def test_no_bracket(self):
+        self.assertTrue(bracket_validator("life"))
+
+    def test_single_bracket(self):
+        self.assertFalse(bracket_validator("]"))
+        self.assertFalse(bracket_validator("{"))
+
+
 
 
 if __name__ == "__main__":

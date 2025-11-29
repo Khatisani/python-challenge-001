@@ -1,17 +1,13 @@
 from collections  import Counter
+
 """
-Function that ccurately identifies whether the bracket structure in the given string is valid.
-
-Args:
-A string
-
-Return:
-True if brackets are properly matched
-False if there are extra or missing brackets 
+This was my attempt at solving it without going the stack route
+I tried to be smart and crative for a few hours
+I finally made peace with it that I have to use stack :(
 
 """
 
-def bracket_validator(string):
+def attempt_bracket_validator(string):
     if not isinstance(string, str):
         raise ValueError
     if string == "":
