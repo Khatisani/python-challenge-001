@@ -1,4 +1,4 @@
-from collections import Counter
+from collections  import Counter
 """
 Function that ccurately identifies whether the bracket structure in the given string is valid.
 
@@ -10,7 +10,6 @@ True if brackets are properly matched
 False if there are extra or missing brackets 
 
 """
-# string = "life(())"
 
 def bracket_validator(string):
     if not isinstance(string, str):
