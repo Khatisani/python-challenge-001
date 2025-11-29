@@ -85,9 +85,11 @@ class TestBracketValidator(unittest.TestCase):
 
     def test_string(self):
         with self.assertRaises(ValueError):
-            (789)
+            bracket_validator(789)
 
     def test_empty_string(self):
-        self.assertTrue("")
+        self.assertTrue(bracket_validator(""))
 
 
+if __name__ == "__main__":
+    unittest.main()
